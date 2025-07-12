@@ -1,0 +1,38 @@
+{
+  "name": "week-2-weeklytask",
+  "version": "1.0.0",
+  "description": "Weekly task minggu ke-2 oleh Yusuf",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lint && node index.js",
+    "dev": "npm run lint && nodemon index.js",
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M16Yusuf/week-2-weeklyTask.git"
+  },
+  "keywords": [
+    "koda",
+    "bootcamp",
+    "weekly-task"
+  ],
+  "author": "m16yusuf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/M16Yusuf/week-2-weeklyTask/issues"
+  },
+  "homepage": "https://github.com/M16Yusuf/week-2-weeklyTask#readme",
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.47.5"
+  },
+  "devDependencies": {
+    "@eslint/json": "^0.13.0",
+    "@stylistic/eslint-plugin": "^5.1.0",
+    "eslint": "^9.31.0",
+    "globals": "^16.3.0"
+  }
+}

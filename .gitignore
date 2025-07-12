@@ -1,0 +1,8 @@
+# env 
+.env
+
+# library
+node_modules/
+
+
+
