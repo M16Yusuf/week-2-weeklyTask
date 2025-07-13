@@ -22,11 +22,23 @@ const fetchData = (status) => {
     });
 };
 
+/**
+ * Promise adalah salah satu cara untuk mengandle asynchrounous
+ * program, dengan cara kerja memberikan perwakilan dari sebuah 
+ * nilai yang belum diketahui nilainya saat promise dibuat. 
+ * Promise dapat gigunakan dengan fungsi handler dalam 
+ * kesuksesan dan kegagalan dalam sebuah proses aynchronous.
+ */
 
+/**
+ * then catch sebuah method dari instance promise yang dapat digunakan untuk
+ * menangani proses asynchronous, dapat digunakan untuk mereturn object 
+ * dari promise lain atau memanggil fungsi lain apabila promise ditolak 
+ */
 
 //menggunakan function diatas untuk handling then catch
 // pencocokan akun
-const pengecekanLogin = function(inputUser, inputPass){
+const catchLogin = function(inputUser, inputPass){
     const user = "yusuf";
     const pass = "admin";
 
@@ -38,24 +50,33 @@ const pengecekanLogin = function(inputUser, inputPass){
             console.log(reject);
         }); 
 };
-pengecekanLogin("yusuf", "admin");
 
+/**
+ * Async await adalah salah satu cara menghandle proses asychronous. 
+ * Perintah atau syntax paling mudah dipahami dalam asychronous, dimana 
+ * kita merubah function seolah olah menjadi beerjalan secara sychronous,
+ * dan await didalam function itu akan menunda eksekusi hingga proses asychronous
+ * selesai.
+ */
 
 // menggunakan function diatas 
 // handling menggunakan async await
-async function cekLogin (userIn, passIn) {
+async function asyncLogin (userIn, passIn) {
     const user = "yusuf";
     const pass = "admin";
 
     const result = await fetchData(userIn == user && passIn == pass);
     console.log(result);
 }
-cekLogin("yusuf", "admin");
 
+/**
+ * Try catch digunakan sebagai error handling, digunakan sebagai error handling 
+ * dalam perngkondisian atau error handling dalam asychronous program. 
+ */
 
 // menggunakan function diatas 
 // handling menggunakan try catch
-async function cobaLogin (userIn, passIn){
+async function tryLogin (userIn, passIn){
     try{
         const user = "yusuf";
         const pass = "admin";
@@ -65,4 +86,6 @@ async function cobaLogin (userIn, passIn){
         console.log(err);
     }
 };
-cobaLogin("yusuf", "root");
+
+
+export { catchLogin, asyncLogin, tryLogin };
