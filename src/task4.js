@@ -15,7 +15,7 @@ const divideAndsort = function(arrayInput){
     // split inputan string dengan "0"  sebagai pemisah hasil array
     const arrayRes = toString.split("0");
     // ubah kembali tiap string array jadi integer dalam perulangan
-    let nweArrayRes = [];
+    const nweArrayRes = [];
     for(let i = 0; i < arrayRes.length; i++){
         nweArrayRes[nweArrayRes.length] = parseInt(arrayRes[i]);
     }
@@ -26,7 +26,7 @@ const divideAndsort = function(arrayInput){
     // hasil string diubah lagi menjadi integer, returnkan hasil
     const result = parseInt(gabung);
     return result;
-}
+};
 
 
 export { divideAndsort };
