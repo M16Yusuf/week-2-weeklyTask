@@ -97,8 +97,7 @@ async function jawabanLain() {
                 console.clear();
                 console.log("|=========== [ DATABASE ] ============|");
                 console.table(result); 
-                console.log(`input "5" kembali ke menu`);
-                console.log(`input "0" close program`);   
+                console.log(`input "5" kembali ke menu`);   
                 menu = await rl.question('Apa yang akan anda lakukan? ');
                 break;
             case "2":
