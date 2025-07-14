@@ -19,32 +19,46 @@ const rl = readlinePromises.createInterface({
 });
 
 
+// funtion handling jawaban nomor 1-4
 async function jawabanLain() {
     // nomor 1
     // penggunana then-catch, async await, dan try catch
+    console.log("========== [ Jawaban nomor 1 ] ==========");
+    console.log("penggunana then-catch, async await, dan try catch (timeout 3detik)");
     const testUser = "yusuf";
     const testPass = "admin";
     asyncLogin(testUser, testPass);
     catchLogin(testUser, testPass);
     tryLogin(testUser, testPass);
+    // tunggu nomor 1 keluar 
+    await new Promise(resolve => setTimeout(resolve, 3500));
 
     
     // nomor 2
     // print perulangan product timeout 3 detik
+    console.log("========== [ Jawaban nomor 2 ] ==========");
+    console.log("print perulangan product (timeout 3 detik)");
     const testNo2 = true; 
     getDataFromServer(testNo2, processData);
+    // tunggu nomor kedua keluar
+    await new Promise(resolve => setTimeout(resolve, 4000));
 
 
     // Nomor 3
     // output nama dan domisili
+    console.log("========== [ Jawaban nomor 3 ] ==========");
+    console.log("reconstruc data {nama, domisili} dari url json");
     (async function(){
         const url = "https://jsonplaceholder.typicode.com/users";
         const resss = await dapatkanData(url);
         console.log(resss);
     })();
+    await new Promise(resolve => setTimeout(resolve, 1500));
 
 
     // nomor 4
+    console.log("========== [ Jawaban nomor 4 ] ==========");
+    console.log("ubah inputan = 5956560159466056, jadi = 56159466595656 integer");
     // output 56159466595656
     console.log(divideAndsort(5956560159466056));
 }
@@ -120,8 +134,8 @@ async function jawabanLain() {
                 break;
             case "6":
                 await jawabanLain(); 
-                await new Promise(resolve => setTimeout(resolve, 4500)); 
-                console.log("|=================================|");
+                await new Promise(resolve => setTimeout(resolve, 1000)); 
+                console.log("|========================================|");
                 menu = await rl.question('input "5" kembali ke menu : ');
                 break;
         }
